@@ -1,0 +1,104 @@
+<!-- ============================================================== -->
+<!-- Top header  -->
+<!-- ============================================================== -->
+<!-- Start Navigation -->
+<div class="header header-light head-shadow">
+  <div class="container">
+    <nav id="navigation" class="navigation navigation-landscape">
+      <div class="nav-header">
+        <a class="nav-brand" routerLink="">
+          <img src="assets/img/logofukuro.png" class="logo" alt="" />
+        </a>
+        <div class="nav-toggle"></div>
+      </div>
+      <div class="nav-menus-wrapper" style="transition-property: none;">
+        <ul class="nav-menu">
+
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/motels/list">Trọ thuê<span class="submenu-indicator"></span></a>
+            <ul class="nav-dropdown nav-submenu">
+              <li>
+                <a routerLink="/motels/list">Danh sách trọ</a>
+              </li>
+              <li>
+                <a routerLink="/motels/create">Tạo mới trọ</a>
+              </li>
+            </ul>
+          </li>
+
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/rooms/list">Phòng trọ<span class="submenu-indicator"></span></a>
+            <ul class="nav-dropdown nav-submenu">
+              <li>
+                <a routerLink="/rooms/list">Danh sách phòng</a>
+              </li>
+              <li>
+                <a routerLink="/rooms/create">Tạo mới phòng</a>
+              </li>
+            </ul>
+          </li>
+
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/renters/list">Khách thuê<span class="submenu-indicator"></span></a>
+            <ul class="nav-dropdown nav-submenu">
+              <li>
+                <a routerLink="/renters/list">Danh sách khách thuê</a>
+              </li>
+              <li>
+                <a routerLink="/renters/create">Tạo mới khách thuê</a>
+              </li>
+            </ul>
+          </li>
+
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/bills/list">Hoá đơn<span class="submenu-indicator"></span></a>
+            <ul class="nav-dropdown nav-submenu">
+              <li>
+                <a routerLink="/bills/list">Danh sách hoá đơn</a>
+              </li>
+              <li>
+                <a routerLink="/bills/create">Tạo mới hoá đơn</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+        <ul class="nav-menu nav-menu-social align-to-right nav-res">
+          <li>
+            <div ngbDropdown class="d-inline-block">
+              <a id="dropdownBasic1" ngbDropdownToggle style="padding: 20px;">
+                <div class="avatar avatar-md avatar-indicators avatar-online">
+                  <img *ngIf="avatar" alt="avatar" src="{{avatar}}" class="rounded-circle">
+                  <img *ngIf="!avatar" alt="avatar" src="https://via.placeholder.com/40x40" class="rounded-circle">
+                </div>
+                <span style="margin-left: 5px;">{{username }}</span>
+              </a>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem>
+                  <a class="dropdown-item dropright-lg dropdown-list-group-item" routerLink="my-account/renal-manage">
+                    <span class="mr-1">
+                      <i class="ti-home"></i>
+                    </span>
+                    Quản lí tài khoản
+                  </a>
+                </button>
+                <button ngbDropdownItem>
+                  <a class="dropdown-item dropright-lg" (click)="auth.logout()">
+                    <span class="mr-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-power">
+                        <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                        <line x1="12" y1="2" x2="12" y2="12"></line>
+                      </svg></span>Đăng xuất
+                  </a>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- End Navigation -->
+<div class="clearfix"></div>
+<!-- ============================================================== -->
+<!-- Top header  -->
+<!-- ============================================================== -->
